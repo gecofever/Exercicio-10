@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Exercicio 10 - Prof. Daniel</title>
+  <link href="exercicio10.css" rel="stylesheet" type="text/css" />
+  
+  <!-- Importar o Vue.js -->
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+
+  <div id="app">  
+     
+     <table>
+       
+       <tr>
+         <td></td>
+         <td>ID</td>
+         <td>Descrição</td>
+         <td>Realizado</td>
+       </tr>
+       
+       <tr v-for="t of tarefas">
+         <td>
+           <img v-if=" t.estaCompleta == true " src="https://img.icons8.com/emoji/40/000000/ok-button-emoji.png">
+           <img v-else=" t.estaCompleta == false " src="https://img.icons8.com/emoji/40/zzz.png">
+         </td>
+         
+         <td>{{ t.id }}</td>
+         <td>{{ t.descricao }}</td>
+         <td>{{ t.estaCompleta }} </td>
+
+       </tr>
+       
+     </table>
+     
+  </div>
+  
+  <script src="exercicio10.js"></script>
+</body>
+
+</html>
